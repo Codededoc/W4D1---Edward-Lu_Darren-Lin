@@ -1,0 +1,625 @@
+  [1m[35m (724.1ms)[0m  [1m[35mCREATE DATABASE "first_route_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (557.3ms)[0m  [1m[35mCREATE DATABASE "first_route_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-10-15 14:04:00 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (7.2ms)
+Completed 200 OK in 77ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-15 14:09:54 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 34ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-15 14:09:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-15 14:09:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.html" for 127.0.0.1 at 2018-10-15 14:23:08 -0400
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users.html" for 127.0.0.1 at 2018-10-15 14:24:06 -0400
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 203ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started GET "/users.html" for 127.0.0.1 at 2018-10-15 14:25:18 -0400
+Processing by UsersController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 97ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?fav_pizza=pepperoni" for 127.0.0.1 at 2018-10-15 14:26:43 -0400
+Processing by UsersController#index as */*
+  Parameters: {"fav_pizza"=>"pepperoni"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?admin=true" for 127.0.0.1 at 2018-10-15 14:27:06 -0400
+Processing by UsersController#index as */*
+  Parameters: {"admin"=>"true"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?darren=student" for 127.0.0.1 at 2018-10-15 14:28:11 -0400
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users?fav_food=pizza" for 127.0.0.1 at 2018-10-15 14:32:14 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 40ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-15 14:33:28 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-15 14:33:57 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2?food[chinese]=rice&food[italian]=pasta&food[drink][sweet]=soda&something_else=ahhhhhhhh" for 127.0.0.1 at 2018-10-15 14:38:33 -0400
+Processing by UsersController#show as */*
+  Parameters: {"food"=>{"chinese"=>"rice", "italian"=>"pasta", "drink"=>{"sweet"=>"soda"}}, "something_else"=>"ahhhhhhhh", "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/2?food[chinese]=rice&food[italian]=pasta&food[drink][sweet]=soda&something_else=ahhhhhhhh" for 127.0.0.1 at 2018-10-15 14:39:09 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/2"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users/2?food[chinese]=rice&food[italian]=pasta&food[drink][sweet]=soda&something_else=ahhhhhhhh" for 127.0.0.1 at 2018-10-15 14:40:29 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/2"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users?food[chinese]=rice&food[italian]=pasta&food[drink][sweet]=soda&something_else=ahhhhhhhh" for 127.0.0.1 at 2018-10-15 14:40:48 -0400
+Processing by UsersController#create as */*
+  Parameters: {"food"=>{"chinese"=>"rice", "italian"=>"pasta", "drink"=>{"sweet"=>"soda"}}, "something_else"=>"ahhhhhhhh"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (398.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (45.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(971524012308289650)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20181015184629)
+  [1m[35m (47.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (154.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181015184629_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (38.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181015184629"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (62.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (15.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-15 18:48:19.054947"], ["updated_at", "2018-10-15 18:48:19.054947"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(971524012308289650)[0m
+  ↳ bin/rails:9
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users" for 127.0.0.1 at 2018-10-15 14:57:08 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  [1m[36mUser Load (41.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 141ms (Views: 36.9ms | ActiveRecord: 44.8ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Edward"], ["email", "myemail@gmail.com"], ["created_at", "2018-10-15 18:59:27.095712"], ["updated_at", "2018-10-15 18:59:27.095712"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Darren"], ["email", "email@gmail.com"], ["created_at", "2018-10-15 18:59:27.139547"], ["updated_at", "2018-10-15 18:59:27.139547"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+Started GET "/users" for 127.0.0.1 at 2018-10-15 15:00:26 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/var/rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  [1m[36mUser Load (42.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 94ms (Views: 14.9ms | ActiveRecord: 50.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-15 15:03:46 -0400
+Processing by UsersController#create as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-15 15:04:21 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 30ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?simcha=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:05:28 -0400
+Processing by UsersController#create as */*
+  Parameters: {"simcha"=>"aa@gmail.com"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?:user=simcha&:email=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:06:09 -0400
+Processing by UsersController#create as */*
+  Parameters: {":user"=>"simcha", ":email"=>"aa@gmail.com"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?:name=simcha&:email=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:06:34 -0400
+Processing by UsersController#create as */*
+  Parameters: {":name"=>"simcha", ":email"=>"aa@gmail.com"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?:name=simcha&:email=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:08:14 -0400
+Processing by UsersController#create as */*
+  Parameters: {":name"=>"simcha", ":email"=>"aa@gmail.com"}
+Completed 400 Bad Request in 22ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?name=simcha&email=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:10:05 -0400
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"simcha", "email"=>"aa@gmail.com"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?name=simcha&email=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:11:37 -0400
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"simcha", "email"=>"aa@gmail.com"}
+Completed 400 Bad Request in 16ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=simcha&user[email]=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:12:56 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>"aa@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "simcha"], ["email", "aa@gmail.com"], ["created_at", "2018-10-15 19:12:57.012344"], ["updated_at", "2018-10-15 19:12:57.012344"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 77ms (Views: 0.7ms | ActiveRecord: 61.4ms)
+
+
+Started POST "/users?name=simcha&email=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:15:21 -0400
+
+SyntaxError - syntax error, unexpected ')', expecting keyword_end
+...User.new.permit(:name, :email))
+...                              ^:
+  app/controllers/users_controller.rb:9:in `'
+
+Started POST "/users?name=simcha&email=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:15:29 -0400
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"simcha", "email"=>"aa@gmail.com"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 13.3ms)
+
+
+
+NoMethodError - undefined method `permit' for #<User:0x00007fbbe7a975e0>
+Did you mean?  persisted?:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=simcha&user[email]=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:15:53 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>"aa@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "simcha"], ["email", "aa@gmail.com"], ["created_at", "2018-10-15 19:15:53.819617"], ["updated_at", "2018-10-15 19:15:53.819617"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 78ms (Views: 0.4ms | ActiveRecord: 63.6ms)
+
+
+Started POST "/users?user[name]=simcha&user=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:16:21 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>"aa@gmail.com"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `permit' for "aa@gmail.com":String:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=simcha&user=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:17:12 -0400
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:22:in `'
+
+Started POST "/users?user[name]=simcha&user=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:17:22 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>"aa@gmail.com"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `permit' for "aa@gmail.com":String:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=simcha&user=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:18:01 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>"aa@gmail.com"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `permit' for "aa@gmail.com":String:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=simcha&user[email]=" for 127.0.0.1 at 2018-10-15 15:18:41 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (4.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 422 Unprocessable Entity in 142ms (Views: 0.3ms | ActiveRecord: 18.1ms)
+
+
+Started POST "/users?user[name]=&user[email]=" for 127.0.0.1 at 2018-10-15 15:19:12 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"", "email"=>""}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users?user[name]=&user[email]=" for 127.0.0.1 at 2018-10-15 15:20:00 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"", "email"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 422 Unprocessable Entity in 39ms (Views: 0.4ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/users?user[name]=simcha&user[email]=" for 127.0.0.1 at 2018-10-15 15:20:06 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users?id=2" for 127.0.0.1 at 2018-10-15 15:23:26 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 28ms (Views: 6.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/users?users/id=2" for 127.0.0.1 at 2018-10-15 15:24:29 -0400
+Processing by UsersController#index as */*
+  Parameters: {"users/id"=>"2"}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-15 15:24:58 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Completed 200 OK in 53ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2018-10-15 15:29:36 -0400
+Processing by UsersController#update as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 8.8ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007fbbe72a6408>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:26:in `update'
+
+Started PATCH "/users/3?user[name]=simcha&user[email]=" for 127.0.0.1 at 2018-10-15 15:30:25 -0400
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>""}, "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:26
+Completed 422 Unprocessable Entity in 36ms (Views: 1.5ms | ActiveRecord: 8.6ms)
+
+
+Started PATCH "/users/3?user[name]=simcha&user[email]=aa@gmail.com" for 127.0.0.1 at 2018-10-15 15:30:30 -0400
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>"aa@gmail.com"}, "id"=>"3"}
+  [1m[36mUser Load (34.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:26
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:26
+Completed 200 OK in 47ms (Views: 1.9ms | ActiveRecord: 40.8ms)
+
+
+Started PATCH "/users/3?user[name]=simcha&user[email]=aa2@gmail.com" for 127.0.0.1 at 2018-10-15 15:30:52 -0400
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>"aa2@gmail.com"}, "id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mUser Update (38.6ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "aa2@gmail.com"], ["updated_at", "2018-10-15 19:30:52.584898"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:26
+Completed 200 OK in 47ms (Views: 0.4ms | ActiveRecord: 40.2ms)
+
+
+Started PATCH "/users/3?user[name]=simcha&user[email]=" for 127.0.0.1 at 2018-10-15 15:32:10 -0400
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>""}, "id"=>"3"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:26
+Completed 422 Unprocessable Entity in 76ms (Views: 1.1ms | ActiveRecord: 27.1ms)
+
+
+Started PATCH "/users/3?user[name]=simcha&user[email]=aa3@gmail.com" for 127.0.0.1 at 2018-10-15 15:32:15 -0400
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"simcha", "email"=>"aa3@gmail.com"}, "id"=>"3"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "aa3@gmail.com"], ["updated_at", "2018-10-15 19:32:15.769601"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:26
+Completed 200 OK in 59ms (Views: 0.7ms | ActiveRecord: 50.3ms)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-10-15 15:34:20 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:35
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:35
+Redirected to http://localhost:3000/users
+Completed 302 Found in 83ms (ActiveRecord: 48.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-15 15:34:20 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-10-15 15:34:49 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+Completed 404 Not Found in 18ms (ActiveRecord: 10.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=3:
+  app/controllers/users_controller.rb:34:in `destroy'
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-10-15 15:35:57 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+Completed 404 Not Found in 30ms (ActiveRecord: 19.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=3:
+  app/controllers/users_controller.rb:34:in `destroy'
+
+Started DELETE "/users/4" for 127.0.0.1 at 2018-10-15 15:37:10 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:35
+  [1m[36mUser Destroy (12.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[35m (51.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:35
+Redirected to 
+Completed 500 Internal Server Error in 105ms (Views: 1.0ms | ActiveRecord: 71.4ms)
+
+
+
+AbstractController::DoubleRenderError - Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".:
+  app/controllers/users_controller.rb:37:in `destroy'
+
+Started DELETE "/users/4" for 127.0.0.1 at 2018-10-15 15:37:28 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+Completed 404 Not Found in 24ms (ActiveRecord: 17.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=4:
+  app/controllers/users_controller.rb:34:in `destroy'
+
+Started GET "/users" for 127.0.0.1 at 2018-10-15 15:39:16 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users?user[name]=soda&user[email]=soda@gmail.com" for 127.0.0.1 at 2018-10-15 15:40:18 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"soda", "email"=>"soda@gmail.com"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "soda"], ["email", "soda@gmail.com"], ["created_at", "2018-10-15 19:40:18.046580"], ["updated_at", "2018-10-15 19:40:18.046580"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 51ms (Views: 0.5ms | ActiveRecord: 43.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-15 15:40:28 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
